@@ -1,17 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import reactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
+import "semantic-ui-css/semantic.min.css";
+import "react-toastify/dist/ReactToastify.min.css";
+import "./app/layout/styles.css";
+import App from "./app/layout/App";
+import ScrollToTop from "./app/layout/ScrollToTop";
+import { configureStore } from "./app/store/configureStore";
+import { loadEvents } from "./features/events/eventActions";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const store = configureStore();
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+store.dispatch(loadEvents());
+
+const rootEl = document.getElementById("root");
+
+let render = () => {
+  reactDOM.render(
+    <Provider store={store}>
+      <Router>
+        <ScrollToTop />
+        <App />
+      </Router>
+    </Provider>,
+    rootEl
+  );
+};
+
+if (module.hot) {
+  module.hot.accept("./app/layout/App", () => {
+    setTimeout(render);
+  });
+}
+
+// ReactDOM.render(
+//     <App />
+//   document.getElementById("root")
+// );
+
+render();

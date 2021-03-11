@@ -1,0 +1,216 @@
+EventDetailedHeader
+-------------------
+
+<Segment.Group>
+    <Segment basic attached="top" style={{padding: '0'}}>
+        <Image src={`/assets/categoryImages/drinks.jpg`} fluid />
+
+        <Segment basic>
+            <Item.Group>
+                <Item>
+                    <Item.Content>
+                        <Header
+                            size="huge"
+                            content='Event Title'
+                            style={{color: 'white'}}
+                        />
+                        <p>Event Date</p>
+                        <p>
+                            Hosted by <strong>Bob</strong>
+                        </p>
+                    </Item.Content>
+                </Item>
+            </Item.Group>
+        </Segment>
+    </Segment>
+
+    <Segment attached="bottom">
+        <Button>Cancel My Place</Button>
+        <Button color="teal">JOIN THIS EVENT</Button>
+
+        <Button color="orange" floated="right">
+            Manage Event
+        </Button>
+    </Segment>
+</Segment.Group>
+
+EventDetailedHeaderStyles
+-------------------------
+
+const eventImageStyle = {
+    filter: 'brightness(30%)'
+};
+
+const eventImageTextStyle = {
+    position: 'absolute',
+    bottom: '5%',
+    left: '5%',
+    width: '100%',
+    height: 'auto',
+    color: 'white'
+};
+
+EventDetailedInfo
+-----------------
+
+<Segment.Group>
+    <Segment attached="top">
+        <Grid>
+            <Grid.Column width={1}>
+                <Icon size="large" color="teal" name="info"/>
+            </Grid.Column>
+            <Grid.Column width={15}>
+                <p>Event Description</p>
+            </Grid.Column>
+        </Grid>
+    </Segment>
+    <Segment attached>
+        <Grid verticalAlign="middle">
+            <Grid.Column width={1}>
+                <Icon name="calendar" size="large" color="teal"/>
+            </Grid.Column>
+            <Grid.Column width={15}>
+                <span>Event Date</span>
+            </Grid.Column>
+        </Grid>
+    </Segment>
+    <Segment attached>
+        <Grid verticalAlign="middle">
+            <Grid.Column width={1}>
+                <Icon name="marker" size="large" color="teal"/>
+            </Grid.Column>
+            <Grid.Column width={11}>
+                <span>Event Venue</span>
+            </Grid.Column>
+            <Grid.Column width={4}>
+                <Button color="teal" size="tiny" content="Show Map"/>
+            </Grid.Column>
+        </Grid>
+    </Segment>
+</Segment.Group>
+
+EventDetailedChat
+-----------------
+
+<>
+<Segment
+    textAlign="center"
+    attached="top"
+    inverted
+    color="teal"
+    style={{border: 'none'}}
+>
+    <Header>Chat about this event</Header>
+</Segment>
+
+<Segment attached>
+    <Comment.Group>
+        <Comment>
+            <Comment.Avatar src="/assets/user.png"/>
+            <Comment.Content>
+                <Comment.Author as="a">Matt</Comment.Author>
+                <Comment.Metadata>
+                    <div>Today at 5:42PM</div>
+                </Comment.Metadata>
+                <Comment.Text>How artistic!</Comment.Text>
+                <Comment.Actions>
+                    <Comment.Action>Reply</Comment.Action>
+                </Comment.Actions>
+            </Comment.Content>
+        </Comment>
+
+        <Comment>
+            <Comment.Avatar src="/assets/user.png"/>
+            <Comment.Content>
+                <Comment.Author as="a">Elliot Fu</Comment.Author>
+                <Comment.Metadata>
+                    <div>Yesterday at 12:30AM</div>
+                </Comment.Metadata>
+                <Comment.Text>
+                    <p>
+                        This has been very useful for my research. Thanks as well!
+                    </p>
+                </Comment.Text>
+                <Comment.Actions>
+                    <Comment.Action>Reply</Comment.Action>
+                </Comment.Actions>
+            </Comment.Content>
+            <Comment.Group>
+                <Comment>
+                    <Comment.Avatar src="/assets/user.png"/>
+                    <Comment.Content>
+                        <Comment.Author as="a">Jenny Hess</Comment.Author>
+                        <Comment.Metadata>
+                            <div>Just now</div>
+                        </Comment.Metadata>
+                        <Comment.Text>Elliot you are always so right :)</Comment.Text>
+                        <Comment.Actions>
+                            <Comment.Action>Reply</Comment.Action>
+                        </Comment.Actions>
+                    </Comment.Content>
+                </Comment>
+            </Comment.Group>
+        </Comment>
+
+        <Comment>
+            <Comment.Avatar src="/assets/user.png"/>
+            <Comment.Content>
+                <Comment.Author as="a">Joe Henderson</Comment.Author>
+                <Comment.Metadata>
+                    <div>5 days ago</div>
+                </Comment.Metadata>
+                <Comment.Text>Dude, this is awesome. Thanks so much</Comment.Text>
+                <Comment.Actions>
+                    <Comment.Action>Reply</Comment.Action>
+                </Comment.Actions>
+            </Comment.Content>
+        </Comment>
+
+        <Form reply>
+            <Form.TextArea/>
+            <Button
+                content="Add Reply"
+                labelPosition="left"
+                icon="edit"
+                primary
+            />
+        </Form>
+    </Comment.Group>
+</Segment>
+</>
+
+EventDetailedSidebar
+--------------------
+
+<>
+<Segment
+    textAlign="center"
+    style={{border: 'none'}}
+    attached="top"
+    secondary
+    inverted
+    color="teal"
+>
+    2 People Going
+</Segment>
+<Segment attached>
+    <Item.Group relaxed divided>
+        <Item style={{position: 'relative'}}>
+            <Item.Image size="tiny" src='/assets/user.png'/>
+            <Item.Content verticalAlign="middle">
+                <Item.Header as="h3">
+                    <span>Tom</span>
+                </Item.Header>
+            </Item.Content>
+        </Item>
+        <Item style={{position: 'relative'}}>
+            <Item.Image size="tiny" src='/assets/user.png'/>
+            <Item.Content verticalAlign="middle">
+                <Item.Header as="h3">
+                    <span>Bob</span>
+                </Item.Header>
+            </Item.Content>
+        </Item>
+    </Item.Group>
+</Segment>
+</>

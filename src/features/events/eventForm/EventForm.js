@@ -11,6 +11,7 @@ import MyTextArea from "../../../app/common/form/MyTextArea";
 import MySelectInput from "../../../app/common/form/MySelectInput";
 import { categoryData } from "../../../app/api/categoryOptions";
 import MyDateInput from "../../../app/common/form/MyDateInput";
+import { EventLocation } from "../../../app/api/EventLocation";
 
 const EventForm = ({ match, history }) => {
   const dispatch = useDispatch();
@@ -70,6 +71,8 @@ const EventForm = ({ match, history }) => {
               placeholder="Event description"
               rows={3}
             />
+           
+
             <Header content="Event Location" sub color="teal" />
             <MyTextInput name="city" placeholder="Event city" />
             <MyTextInput name="venue" placeholder="Event venue" />

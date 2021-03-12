@@ -1,8 +1,8 @@
 import {
   CREATE_EVENT,
   DELETE_EVENT,
-  FETCH_EVENTS,
   UPDATE_EVENT,
+  FETCH_EVENTS,
 } from "./eventConstants";
 import {
   asyncActionError,
@@ -11,7 +11,7 @@ import {
 } from "../../app/async/asyncReducer";
 import { fetchSampleData } from "../../app/api/mockApi";
 
-export async function loadEvents() {
+export function loadEvents() {
   return async function (dispatch) {
     dispatch(asyncActionStart());
     try {

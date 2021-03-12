@@ -24,7 +24,7 @@ const EvenListItem = ({ event }) => {
       </Segment>
       <Segment>
         <span>
-          <Icon name="clock" /> {format(event.date, "MMMM d, yyyy h:mm a")}
+          <Icon name="clock" /> {format(event.date, "MMMM d, yyyy h:mm a")} |
           <Icon name="marker" /> {event.venue}
         </span>
       </Segment>

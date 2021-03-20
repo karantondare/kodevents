@@ -8,8 +8,7 @@ const EventDetailedChat = () => {
         textAlign="center"
         attached="top"
         inverted
-        color="teal"
-        style={{ border: "none" }}
+        style={{ border: "none", backgroundColor: "#6fb1fc" }}
       >
         <Header>Chat about this event</Header>
       </Segment>

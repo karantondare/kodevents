@@ -36,3 +36,12 @@ body {
   border: none;
   box-shadow: 0 px 2px 0 rgba(34, 36, 38, 0.15);
 }
+
+.ui.button.blue-button {
+  background-color: #4364f7;
+  color: white;
+}
+
+.blue-icon {
+  color: #4364f7;
+}

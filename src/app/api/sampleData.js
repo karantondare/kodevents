@@ -8,7 +8,7 @@ export const sampleData = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin ligula eu leo tincidunt, quis scelerisque magna dapibus. Sed eget ipsum vel arcu vehicula ullamcorper.",
     city: "NY, USA",
     venue: "Empire State Building, 5th Avenue, New York, NY, USA",
-    hostedBy: "Facebook",
+    hostedBy: "Alex",
     hostPhotoURL: "https://randomuser.me/api/portraits/men/4.jpg",
     attendees: [
       {
@@ -18,12 +18,12 @@ export const sampleData = [
       },
       {
         id: "b",
-        name: "Tom",
+        name: "John",
         photoURL: "https://randomuser.me/api/portraits/men/22.jpg",
       },
       {
-        id: "b",
-        name: "Tom",
+        id: "c",
+        name: "Madison",
         photoURL: "https://randomuser.me/api/portraits/women/8.jpg",
       },
     ],
@@ -38,7 +38,7 @@ export const sampleData = [
     city: "London, UK",
     venue: "Punch & Judy, Henrietta Street, London, UK",
     hostedBy: "Sarah",
-    hostPhotoURL: "https://randomuser.me/api/portraits/women/17.jpg",
+    hostPhotoURL: "https://randomuser.me/api/portraits/women/40.jpg",
     attendees: [
       {
         id: "a",
@@ -46,17 +46,17 @@ export const sampleData = [
         photoURL: "https://randomuser.me/api/portraits/women/11.jpg",
       },
       {
-        id: "a",
+        id: "b",
         name: "Tania",
         photoURL: "https://randomuser.me/api/portraits/women/10.jpg",
       },
       {
-        id: "a",
+        id: "c",
         name: "Bob",
         photoURL: "https://randomuser.me/api/portraits/men/5.jpg",
       },
       {
-        id: "b",
+        id: "d",
         name: "Tom",
         photoURL: "https://randomuser.me/api/portraits/men/3.jpg",
       },

@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "cuid": "^2.1.8",
     "date-fns": "^2.19.0",
+    "firebase": "^8.3.0",
     "formik": "^2.2.6",
     "react": "^17.0.1",
     "react-calendar": "^3.3.1",

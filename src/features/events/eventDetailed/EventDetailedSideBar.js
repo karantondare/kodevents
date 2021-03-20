@@ -6,11 +6,8 @@ const EventDetailedSidebar = ({ attendees }) => {
     <>
       <Segment
         textAlign="center"
-        style={{ border: "none" }}
+        style={{ border: "none", backgroundColor: "#6fb1fc" }}
         attached="top"
-        secondary
-        inverted
-        color="teal"
       >
         {attendees.length} {attendees.length > 1 ? "People" : "Person"} Going
       </Segment>

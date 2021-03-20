@@ -24,13 +24,17 @@ const SignedInMenu = () => {
             text="Create Event"
             icon="plus"
           />
-          <Dropdown.Item as={Link} text="My Profile" icon="user" />
+          <Dropdown.Item
+            as={Link}
+            to={`/profile}`}
+            text="My Profile"
+            icon="user"
+          />
           <Dropdown.Item
             onClick={() => {
               dispatch(signOutUser());
               history.push("/");
             }}
-            as={Link}
             text="Sign out"
             icon="power"
           />

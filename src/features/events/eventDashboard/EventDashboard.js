@@ -1,14 +1,24 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Grid } from "semantic-ui-react";
-import LoadingComponent from "../../../app/layout/LoadingComponent";
+import { listenToEventsFromFirestore } from "../../../app/firestore/firestoreService";
 import EventFilters from "./EventFilters";
 import EventList from "./EventList";
 import EventListItemPlaceholder from "./EventListItemPlaceholder";
+import { listenToEvents } from "../eventActions";
+
+import useFirestoreCollection from "../../../app/hooks/useFirestoreCollection";
 
 const EventDashboard = () => {
+  const dispatch = useDispatch();
   const { events } = useSelector((state) => state.event);
   const { loading } = useSelector((state) => state.async);
+
+  useFirestoreCollection({
+    query: () => listenToEventsFromFirestore(),
+    data: (events) => dispatch(listenToEvents(events)),
+    deps: [dispatch],
+  });
 
   return (
     <Grid>
@@ -27,4 +37,5 @@ const EventDashboard = () => {
     </Grid>
   );
 };
+
 export default EventDashboard;

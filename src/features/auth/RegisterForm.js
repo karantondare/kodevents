@@ -6,10 +6,7 @@ import MyTextInput from "../../app/common/form/MyTextInput";
 import { Button, Label } from "semantic-ui-react";
 import { useDispatch } from "react-redux";
 import { closeModal } from "../../app/common/modals/modalReducer";
-import {
-  registerInFirebase,
-  signInWithEmail,
-} from "../../app/firestore/firebaseService";
+import { registerInFirebase } from "../../app/firestore/firebaseService";
 
 export default function RegisterForm() {
   const dispatch = useDispatch();

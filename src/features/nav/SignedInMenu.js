@@ -25,7 +25,7 @@ const SignedInMenu = () => {
         position="right"
         src={currentUser.photoURL || "/assets/user.png"}
       />
-      <Dropdown pointing="top left" text={currentUser.email}>
+      <Dropdown pointing="top left" text={currentUser.displayName}>
         <Dropdown.Menu>
           <Dropdown.Item
             as={Link}
@@ -35,9 +35,15 @@ const SignedInMenu = () => {
           />
           <Dropdown.Item
             as={Link}
-            to={`/profile}`}
-            text="My Profile"
+            to={`/profile`}
+            text="My profile"
             icon="user"
+          />
+          <Dropdown.Item
+            as={Link}
+            to={`/account`}
+            text="My account"
+            icon="settings"
           />
           <Dropdown.Item onClick={handleSignOut} text="Sign out" icon="power" />
         </Dropdown.Menu>

@@ -13,6 +13,7 @@ import ErrorComponent from "../common/errors/ErrorComponent";
 import AccountPage from "../../features/auth/AccountPage";
 import { useSelector } from "react-redux";
 import LoadingComponent from "./LoadingComponent";
+import ProfilePage from "../../features/profiles/profilePage/ProfilePage";
 
 const App = () => {
   const { key } = useLocation();
@@ -39,6 +40,7 @@ const App = () => {
                 key={key}
               />
               <Route path="/account" component={AccountPage} />
+              <Route path="/profile/:id" component={ProfilePage} />
               <Route path="/error" component={ErrorComponent} />
             </Container>
           </>
